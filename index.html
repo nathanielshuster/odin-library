@@ -5,8 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Odin Library</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gentium+Book+Plus:b">
 </head>
 <body>
-  
+  <div class="container">
+    <div class="header">
+      <h1>Odin Library</h1>
+    </div>
+
+    <div class="content">
+      <div class="cards">
+        <div class="book-form">
+          <form>
+            <div class="input-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" name="title">
+            </div>
+
+            <div class="input-group">
+              <label for="author">Author</label>
+              <input type="text" id="author" name="author">
+            </div>
+
+            <div class="input-group">
+              <label for="yes-no">Read</label>
+              <input type="radio" id="read-yes" name="yes-no">Yes</input>
+              <input type="radio" id="read-no" name="yes-no">No</input>
+            </div>
+
+            <div class="input-group">
+              <label for="pages">Pages</label>
+              <input type="number" id="pages" name="pages">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

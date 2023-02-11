@@ -1,0 +1,22 @@
+body {
+  font-family: "Gentium Book Plus", serif;
+  margin: auto;
+}
+
+.container {
+  display: grid;
+}
+
+.header {
+  padding: 25px;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0 1px 10px rgb(202, 202, 202);
+}
+
+h1 {
+  margin: auto;
+}
+
+.content {
+  padding: 50px 25px
+}
