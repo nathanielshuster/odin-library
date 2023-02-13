@@ -7,6 +7,7 @@
   <title>Odin Library</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gentium+Book+Plus:b">
+  <script src="./script.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -29,14 +30,15 @@
             </div>
 
             <div class="input-group">
-              <label for="yes-no">Read</label>
-              <input type="radio" id="read-yes" name="yes-no">Yes</input>
-              <input type="radio" id="read-no" name="yes-no">No</input>
+              <label for="read">Read</label>
+              <select name="read" id="read">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
             </div>
 
-            <div class="input-group">
-              <label for="pages">Pages</label>
-              <input type="number" id="pages" name="pages">
+            <div>
+              <input type="submit" value="Submit">
             </div>
           </form>
         </div>
