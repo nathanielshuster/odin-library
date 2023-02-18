@@ -1,48 +1,56 @@
-let myLibrary = [
-  {
-    title: "No Longer Human",
-    author: "Osamu Dazai",
-    read: "Yes"
+let myLibrary = [];
+
+function Book(book) {
+  this.title = book.title
+  this.author = book.author
+  this.read = book.read
+}
+
+document.addEventListener('submit', function(e) {
+  e.preventDefault()
+  const newBookTitle = document.querySelector('#title').value
+  const newBookAuthor = document.querySelector('#author').value
+  const newBookStatus = document.querySelector('#status').value
+
+  const newBook = {
+    title: newBookTitle,
+    author: newBookAuthor,
+    read: newBookStatus
   }
-];
 
-function Book(title, author, read) {
-  this.title = title
-  this.author = author
-  this.read = "Yes"
+  addBookToLibrary(newBook)
+});
+
+function addBookToLibrary(book) {
+  let newBook = new Book(book)
+  myLibrary.push(newBook)
   
-  if (read === "No") {
-    this.read = "No"
-  }
+  displayBook(newBook)
 }
 
-function addBookToLibrary(input) {
-  
+function displayBook(book) {
+  const cardDiv = document.querySelector(".content");
+
+  // create new card
+  const card = document.createElement("div")
+  card.classList.add("card")
+
+  // create data elements
+  const title = document.createElement("h3")
+  title.classList.add("title")
+  title.textContent += book.title
+  const author = document.createElement("p")
+  author.classList.add("author")
+  author.textContent += book.author
+  const status = document.createElement("p")
+  status.classList.add("status")
+  status.textContent += book.read
+
+  // add data elements to card
+  card.appendChild(title)
+  card.appendChild(author)
+  card.appendChild(status)
+
+  // add card to card div
+  cardDiv.appendChild(card)
 }
-
-function displayBooks() {
-  const cardDiv = document.querySelector(".cards");
-
-  myLibrary.forEach(book => {
-    // create new card
-    const card = document.createElement("div")
-
-    // create data elements
-    const title = document.createElement("h3")
-    title.textContent += book.title
-    const author = document.createElement("p")
-    author.textContent += book.author
-    const read = document.createElement("p")
-    read.textContent += book.read
-
-    // add data elements to card
-    card.appendChild(title)
-    card.appendChild(author)
-    card.appendChild(read)
-
-    // add card to card div
-    cardDiv.appendChild(card)
-  });
-}
-
-displayBooks();
