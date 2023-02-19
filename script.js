@@ -29,7 +29,7 @@ function addBookToLibrary(book) {
 }
 
 function displayBook(book) {
-  const cardDiv = document.querySelector(".content");
+  const container = document.querySelector(".main");
 
   // create new card
   const card = document.createElement("div")
@@ -52,5 +52,5 @@ function displayBook(book) {
   card.appendChild(status)
 
   // add card to card div
-  cardDiv.appendChild(card)
+  container.appendChild(card)
 }
