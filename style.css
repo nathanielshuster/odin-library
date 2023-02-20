@@ -76,5 +76,41 @@ select {
   padding: 25px;
   background-color: #ffffff;
   border-radius: 5px;
-  border-left: 10px solid #000000;
+}
+
+.title, .author {
+  margin: auto;
+  font-size: 18px;
+}
+
+.title {
+  font-style: italic;
+}
+
+.card {
+  display: grid;
+}
+
+.data-div {
+  display: grid;
+  gap: 15px;
+  align-content: start;
+}
+
+.button-div {
+  display: grid;
+  gap: 15px;
+  align-content: end;
+}
+
+button {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #f0eef1;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 5px 5px 10px;
+  margin-top: 5px;
+  height: 37px;
 }
