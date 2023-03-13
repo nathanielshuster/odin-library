@@ -1,5 +1,9 @@
 let myLibrary = [];
 
+class Book(data) {
+  
+}
+
 function Book(book) {
   this.title = book.title
   this.author = book.author
