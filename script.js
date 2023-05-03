@@ -1,13 +1,11 @@
 let myLibrary = [];
 
-class Book(data) {
-  
-}
-
-function Book(book) {
-  this.title = book.title
-  this.author = book.author
-  this.read = book.read
+class Book {
+  constructor(data) {
+    this.title = data.title
+    this.author = data.author
+    this.read = data.read
+  }
 }
 
 document.addEventListener('submit', function(e) {
